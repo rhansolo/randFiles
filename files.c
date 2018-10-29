@@ -23,12 +23,12 @@ int main(){
 
 	int file1 = open("file.txt", O_WRONLY,0777);
 	printf("\nWriting numbers to file.txt...\n");
-	write(file1, &arr, 40);
+	write(file1, arr, 40);
 
 	printf("Reading numbers from file.txt...\n\n");
 	int arr1[10];
 	int file2 = open("file.txt", O_RDONLY,0777);
-	read(file2, &arr1, 40);
+	read(file2, arr1, 40);
 
 	printf("Verification that written values were the same:\n");
 	for (int i = 0; i < 10; i++){
